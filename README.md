@@ -20,3 +20,12 @@ output = `z`
 `Ks`=shape factor=1.0 for group of cylinders, 1.1 for group of square piles <br />
 `W=n*bp`=projected width of piles <br />
 `be`=equivalent width of pile group, back-calculated from `y_s` (scour depth) values using FDOT-2010 equations <br />
+
+If we denote `S'n/bp` & `S'm/bp` by `Sn` & `Sm`, then the MARS formula is: <br />
+
+       Z = 0.5639617 + 88.29669 * Max(0, tanh(m) - 0.9950548) - 0.8056905 * Max(0, 0.9640276 - tanh(n)) 
+       - 23.86009 * Max(0, tanh(Sm) - 0.9950548) + 3.399566 * Max(0, 0.9640276 - tanh(Sn)) - 4.202132 * Max(0, tanh(Sn) - 0.9640276)
+
+and the linear alternative is: <br />
+
+    Z = 0.84 * m ^ 0.43 * n ^ -0.06 * Sm ^ -0.06 * Sn ^ -0.55

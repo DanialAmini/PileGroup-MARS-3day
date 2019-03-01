@@ -24,7 +24,8 @@ output = `z`
 If we denote `S'n/bp` & `S'm/bp` by `Sn` & `Sm`, then the MARS formula is: <br />
 
        Z = 0.5639617 + 88.29669 * Max(0, tanh(m) - 0.9950548) - 0.8056905 * Max(0, 0.9640276 - tanh(n)) 
-       - 23.86009 * Max(0, tanh(Sm) - 0.9950548) + 3.399566 * Max(0, 0.9640276 - tanh(Sn)) - 4.202132 * Max(0, tanh(Sn) - 0.9640276)
+       - 23.86009 * Max(0, tanh(Sm) - 0.9950548) + 3.399566 * Max(0, 0.9640276 - tanh(Sn)) 
+       - 4.202132 * Max(0, tanh(Sn) - 0.9640276)
 
 and the linear alternative is: <br />
 
